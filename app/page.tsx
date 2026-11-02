@@ -21,7 +21,7 @@ export default function Home() {
     <main id="main">
       <section className="shell hero grid items-center gap-10 lg:grid-cols-2">
         <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> NEW MEXICO ROOTS. A FRESHER FUTURE.</p>
-          <h1>A little smarter.<br />A lot more<br /><span className="sunset-text">refreshing.</span></h1>
+          <h1>Modern Machines.<br /><span className="sunset-text">Everyday Essentials.</span></h1>
           <p className="hero-description">AI-powered vending and smart coolers for the places New Mexico works. Good things to grab. One less thing to manage.</p>
           <div className="flex flex-wrap gap-4"><a className="button button-orange" href="#contact">Refresh your workplace <Arrow /></a><a className="button button-outline" href="#solutions">Explore the possibilities</a></div>
           <div className="hero-footnote"><span aria-hidden="true">✦</span> Built around your business. Inspired by the Land of Enchantment.</div>
