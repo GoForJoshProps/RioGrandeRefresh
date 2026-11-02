@@ -25,7 +25,15 @@ export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="shell flex flex-wrap items-center justify-between gap-5 py-6">
-      <a href="#" className="wordmark" aria-label="Rio Grande Refresh home"><span className="brand-symbol" aria-hidden="true">≈</span><span>RIO GRANDE<small>REFRESH</small></span></a>
+    
+<a href="#" className="wordmark" aria-label="Rio Grande Refresh home">
+  <img
+    src="/RGR Logo.png"
+    alt="Rio Grande Refresh"
+    style={{ width: "220px", height: "auto", maxWidth: "100%" }}
+  />
+</a>
+
       <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#solutions">Our solutions</a><a href="#how-it-works">How it works</a><a className="nav-cta" href="#contact">Let’s talk <Arrow /></a></nav>
     </header>
     <main id="main">
