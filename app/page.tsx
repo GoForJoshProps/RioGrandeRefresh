@@ -5,7 +5,7 @@ function Cooler() {
   return (
     <div className="cooler-scene">
       <img
-        src="/620s.png"
+        src="/620S.png"
         alt="Rio Grande Refresh smart vending machine with digital advertising screen"
         style={{
           width: "100%",
