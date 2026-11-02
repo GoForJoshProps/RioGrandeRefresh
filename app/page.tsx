@@ -76,7 +76,7 @@ export default function Home() {
       <img
         src="/CS%20Ultra%201200.jpg"
         alt="Rio Grande Refresh Ultra 1200 double-door AI cooler"
-        className="w-full rounded-2xl object-contain"
+        className="w-full h-[420px] rounded-2xl object-contain"
       />
       <h3 className="mt-5 text-2xl font-bold">Ultra 1200 AI Cooler</h3>
       <p>
@@ -90,7 +90,7 @@ export default function Home() {
       <img
         src="/CTS%20Mini%20360.jpg"
         alt="Rio Grande Refresh Mini 360 single-door AI cooler"
-        className="w-full rounded-2xl object-contain"
+        className="w-full h-[420px] rounded-2xl object-contain"
       />
       <h3 className="mt-5 text-2xl font-bold">Mini 360 AI Cooler</h3>
       <p>
