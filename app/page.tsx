@@ -1,14 +1,24 @@
 const Arrow = () => <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 19 19 5M5 5h14v14" /></svg>;
 
+
 function Cooler() {
-  return <div className="cooler-scene" role="img" aria-label="Illustration of a Rio Grande Refresh smart cooler in a New Mexico sunset landscape">
-    <div className="sun" /><div className="mesa mesa-back" /><div className="mesa mesa-front" />
-    <div className="cooler"><div className="cooler-brand">RIO GRANDE <span>REFRESH</span></div>
-      <div className="cooler-window">{[0,1,2].map(row => <div className="shelf" key={row}>{[0,1,2,3].map(col => <div className={`drink drink-${(row + col) % 3}`} key={col}><span>RG</span></div>)}</div>)}
-      </div><div className="cooler-handle" /><div className="cooler-screen"><span className="status-dot" /> TAP. GRAB. GO.</div><div className="cooler-vent" />
-    </div><div className="floating-note"><span className="status-dot" /> A smarter kind of snack break.</div>
-  </div>;
+  return (
+    <div className="cooler-scene">
+      <img
+        src="/620s.png"
+        alt="Rio Grande Refresh smart vending machine with digital advertising screen"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          borderRadius: "24px",
+        }}
+      />
+    </div>
+  );
 }
+
+ 
 
 export default function Home() {
   const email = 'riogranderefresh@gmail.com';
