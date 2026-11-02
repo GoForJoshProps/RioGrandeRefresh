@@ -60,7 +60,48 @@ export default function Home() {
         ['03', 'Make room for refreshment', 'Plan the next steps with our team and bring a little more convenience to the workday.'],
       ].map(([number,title,text]) => <article key={number} className="step"><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
       <section className="shell section-space local-section"><div><p className="eyebrow">ROOTED RIGHT HERE</p><h2>Big ideas.<br /><span className="sunset-text">New Mexico heart.</span></h2></div><div><p className="local-copy">Better breaks belong everywhere people do good work.</p><p className="muted">Rio Grande Refresh brings AI-powered vending machines and smart coolers to businesses in New Mexico. Offices, shared workspaces, and teams on the move — let’s find a fresh fit for your space.</p><span className="location-tag">⌖ &nbsp; Serving New Mexico businesses</span></div></section>
-      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><a className="button button-dark" href={`mailto:${email}?subject=Refresh%20my%20workplace`}>Start a conversation <Arrow /></a><a className="font-bold" href="tel:+15059200299">(505) 920-0299</a></div><a className="inline-block mt-5 text-sm break-all" href={`mailto:${email}`}>{email}</a></div></section>
+     
+<section id="machines" className="shell section-space">
+  <div className="section-heading">
+    <p className="eyebrow">SMART VENDING SOLUTIONS</p>
+    <h2>Meet Our Smart Coolers</h2>
+    <p>
+      Convenient snacks, drinks, and fresh food options
+      for New Mexico workplaces.
+    </p>
+  </div>
+
+  <div className="grid gap-8 md:grid-cols-2">
+    <article className="solution-card">
+      <img
+        src="/CS%20Ultra%201200.jpg"
+        alt="Rio Grande Refresh Ultra 1200 double-door AI cooler"
+        className="w-full rounded-2xl object-contain"
+      />
+      <h3 className="mt-5 text-2xl font-bold">Ultra 1200 AI Cooler</h3>
+      <p>
+        Our spacious double-door smart cooler offers a wide
+        selection of drinks, snacks, and convenient meals.
+        Ideal for busy workplaces with larger teams.
+      </p>
+    </article>
+
+    <article className="solution-card">
+      <img
+        src="/CTS%20Mini%20360.jpg"
+        alt="Rio Grande Refresh Mini 360 single-door AI cooler"
+        className="w-full rounded-2xl object-contain"
+      />
+      <h3 className="mt-5 text-2xl font-bold">Mini 360 AI Cooler</h3>
+      <p>
+        A compact smart cooler providing convenient access
+        to drinks, snacks, and everyday essentials.
+        Great for smaller break rooms and workplaces.
+      </p>
+    </article>
+  </div>
+</section>
+ <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><a className="button button-dark" href={`mailto:${email}?subject=Refresh%20my%20workplace`}>Start a conversation <Arrow /></a><a className="font-bold" href="tel:+15059200299">(505) 920-0299</a></div><a className="inline-block mt-5 text-sm break-all" href={`mailto:${email}`}>{email}</a></div></section>
     </main>
     <footer className="shell flex flex-wrap justify-between items-center gap-6 py-9"><a className="wordmark" href="#">RIO GRANDE <small>REFRESH</small></a><p className="text-sm muted">© {new Date().getFullYear()} Rio Grande Refresh · New Mexico</p><a className="text-sm" href="#main">Back to top ↑</a></footer>
   </>;
