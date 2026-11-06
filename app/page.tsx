@@ -291,7 +291,7 @@ export default function Home() {
     <div className="grid items-center gap-10 lg:grid-cols-2">
       <div>
         <p className="eyebrow">ADVERTISE WITH RIO GRANDE REFRESH</p>
-        <h2 className="text-[clamp(2rem,4.2vw,3.5rem)] leading-tight">Your Business. <span className="sunset-text">Our Screens.</span><br />More Local Exposure.</h2>
+        <h2 className="text-[clamp(1.35rem,2.35vw,2.2rem)] leading-tight tracking-tight lg:whitespace-nowrap">Your Business. <span className="sunset-text">Our Screens.</span> More Local Exposure.</h2>
         <p className="muted mt-6 max-w-xl">Put your business in front of customers where they work and take their breaks. Our smart vending screens feature rotating digital advertisements throughout the day.</p>
         <div className="mt-7 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           {[
