@@ -34,14 +34,14 @@ export default function Home() {
   />
 </a>
 
-      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#solutions">Our solutions</a><a href="#how-it-works">How it works</a><a className="nav-cta" href="#contact">Let’s talk <Arrow /></a></nav>
+      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#solutions">Our solutions</a><a href="#how-it-works">How it works</a><a href="#advertise">Advertising</a><a className="nav-cta" href="#request-machine">Free machine <Arrow /></a></nav>
     </header>
     <main id="main">
       <section className="shell hero grid items-center gap-10 lg:grid-cols-2">
         <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> NEW MEXICO ROOTS. A FRESHER FUTURE.</p>
           <h1>Modern Machines.<br /><span className="sunset-text">Everyday Essentials.</span></h1>
           <p className="hero-description">AI-powered vending and smart coolers for the places New Mexico works. Good things to grab. One less thing to manage.</p>
-          <div className="flex flex-wrap gap-4"><a className="button button-orange" href="#contact">Refresh your workplace <Arrow /></a><a className="button button-outline" href="#solutions">Explore the possibilities</a></div>
+          <div className="flex flex-wrap gap-4"><a className="button button-orange" href="#request-machine">Refresh your workplace <Arrow /></a><a className="button button-outline" href="#solutions">Explore the possibilities</a></div>
           <div className="hero-footnote"><span aria-hidden="true">✦</span> Built around your business. Inspired by the Land of Enchantment.</div>
         </div>
         <Cooler />
@@ -139,6 +139,24 @@ export default function Home() {
     }
   `}</style>
 </section>
+      <section id="request-machine" className="shell section-space">
+        <div className="section-heading"><div><p className="eyebrow">NO-COST MACHINE PLACEMENT</p><h2>Request a free vending machine.</h2></div><p>Bring convenient snacks, drinks, and meals to your workplace without buying the equipment. We handle stocking and servicing at approved locations.</p></div>
+        <div className="grid gap-5 md:grid-cols-3">
+          <article className="solution-card"><span className="card-number">01 / TELL US ABOUT YOUR SPACE</span><h3>Your workplace</h3><p>Share your location, approximate employee count, and break room needs.</p></article>
+          <article className="solution-card"><span className="card-number">02 / FIND THE RIGHT FIT</span><h3>Customized selections</h3><p>We’ll discuss smart coolers and snack, drink, and meal options that work for your team.</p></article>
+          <article className="solution-card"><span className="card-number">03 / LOCAL SUPPORT</span><h3>We take care of it</h3><p>Our team manages restocking, cleaning, and machine support.</p></article>
+        </div>
+        <p className="muted mt-6 text-sm">Equipment placement is subject to site approval. Products purchased from the machine are not free.</p>
+        <a className="button button-orange mt-6" href="#contact">Request a machine <Arrow /></a>
+      </section>
+      <section id="advertise" className="process-section">
+        <div className="shell section-space">
+          <p className="eyebrow">ADVERTISE WITH RIO GRANDE REFRESH</p>
+          <h2>Your business. Our screens.</h2>
+          <p className="muted mt-6 max-w-2xl">Put your local business in front of customers with rotating digital ads on participating vending machine screens. Ask about available placements, five-second spots, and annual advertising options.</p>
+          <a className="button button-outline mt-6" href="#contact">Ask about advertising <Arrow /></a>
+        </div>
+      </section>
       <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
 <label htmlFor="inquiry-name" className="font-bold text-sm">Your name</label><input id="inquiry-name" name="name" type="text" autoComplete="name" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
 <label htmlFor="inquiry-email" className="font-bold text-sm">Email</label><input id="inquiry-email" name="email" type="email" autoComplete="email" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
