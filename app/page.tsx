@@ -106,28 +106,31 @@ export default function Home() {
     <div><p className="eyebrow">SOMETHING FOR EVERY BREAK</p><h2>What’s Inside Our Machines?</h2></div>
     <p>Fresh food, refreshing drinks, snacks, and everyday essentials for your team.</p>
   </div>
-  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {[
-      { name: "Fresh Food", detail: "Sandwiches, wraps and ready-to-eat options", photo: "https://unsplash.com/photos/3xVgYMGpU6k/download?force=true&w=700", alt: "Fresh sandwiches in a deli display" },
-      { name: "Energy Drinks", detail: "Monster, Red Bull and other favorites", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/LatasMonster.jpg?width=700", alt: "Monster Energy cans" },
-      { name: "Cold Drinks", detail: "Coke, Pepsi, Gatorade and bottled water", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_%26_pepsi.jpg?width=700", alt: "Coca-Cola and Pepsi drinks" },
-      { name: "Hot Meals", detail: "Breakfast bowls, burritos and noodles", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Cup_of_instant_noodles.jpg?width=700", alt: "Cup of instant noodles" },
-      { name: "Candy & Snacks", detail: "Snickers, Reese’s, M&M’s and more", photo: "https://unsplash.com/photos/fjen7b6ONyg/download?force=true&w=700", alt: "Assorted chocolate candy bars" },
-      { name: "Pastries", detail: "Honey buns and sweet treats", photo: "https://unsplash.com/photos/wp3yOyh0xB4/download?force=true&w=700", alt: "Fresh pastries and sweet baked goods" },
-      { name: "Everyday Essentials", detail: "Useful extras for busy workdays", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Advil_200mg_Caplets.jpg?width=700", alt: "Advil caplets product packaging" },
-      { name: "Personal Care", detail: "Hygiene items and personal care products", photo: "https://unsplash.com/photos/_mbxGy83-so/download?force=true&w=700", alt: "Assorted personal hygiene products" },
-    ].map(({ name, detail, photo, alt }) => (
-      <article key={name} className="solution-card flex flex-col gap-3 overflow-hidden" style={{ minHeight: "290px" }}>
-        <div className="overflow-hidden rounded-xl" style={{ height: "160px", backgroundColor: "#153d43" }}>
-          <img src={photo} alt={alt} loading="lazy" className="h-full w-full object-cover" referrerPolicy="no-referrer" />
-        </div>
-        <h3 className="text-xl font-bold">{name}</h3>
-        <p>{detail}</p>
-      </article>
+      { name: "Fresh Food", x: "1.8%", y: "49.9%" },
+      { name: "Energy Drinks", x: "35%", y: "49.9%" },
+      { name: "Cold Drinks", x: "66.6%", y: "49.9%" },
+      { name: "Hot Meals", x: "98.5%", y: "49.9%" },
+      { name: "Candy & Snacks", x: "1.8%", y: "72.3%" },
+      { name: "Pastries", x: "35%", y: "72.3%" },
+      { name: "Everyday Essentials", x: "66.6%", y: "72.3%" },
+      { name: "Personal Care", x: "98.5%", y: "72.3%" },
+    ].map(({ name, x, y }) => (
+      <div key={name} role="img" aria-label={`Rio Grande Refresh product selection: ${name}`}
+        className="w-full rounded-2xl"
+        style={{
+          aspectRatio: "243 / 270",
+          backgroundImage: 'url("/product-gallery.png.png")',
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "421.4% auto",
+          backgroundPosition: `${x} ${y}`,
+          backgroundColor: "#001e23",
+        }}
+      />
     ))}
   </div>
   <p className="muted mt-6 text-center">Selections vary by location. Request your favorites!</p>
-  <p className="muted mt-3 text-center text-xs">Photo credits: <a href="https://commons.wikimedia.org/wiki/File:LatasMonster.jpg" target="_blank" rel="noopener noreferrer">Monster cans</a>, <a href="https://commons.wikimedia.org/wiki/File:Coca-Cola_%26_pepsi.jpg" target="_blank" rel="noopener noreferrer">Coke &amp; Pepsi</a>, <a href="https://commons.wikimedia.org/wiki/File:Cup_of_instant_noodles.jpg" target="_blank" rel="noopener noreferrer">Cup noodles</a>, <a href="https://commons.wikimedia.org/wiki/File:Advil_200mg_Caplets.jpg" target="_blank" rel="noopener noreferrer">Advil</a> (Wikimedia Commons; see links for authors and licenses).</p>
   <div className="mt-6 text-center"><a className="button button-orange" href="#request-machine">Request your free machine <Arrow /></a></div>
 </section>
 <section className="shell section-space" aria-label="Businesses we serve">
