@@ -126,7 +126,7 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="shell section-space local-section"><div><p className="eyebrow">ROOTED RIGHT HERE</p><h2>Big ideas.<br /><span className="sunset-text">New Mexico heart.</span></h2></div><div><p className="local-copy">Better breaks belong everywhere people do good work.</p><p className="muted">Rio Grande Refresh brings AI-powered vending machines and smart coolers to businesses in New Mexico. Offices, shared workspaces, and teams on the move — let’s find a fresh fit for your space.</p><span className="location-tag">⌖ &nbsp; Serving New Mexico businesses</span></div></section>
+      
      
 <section id="machines" className="shell section-space">
   <div className="section-heading">
