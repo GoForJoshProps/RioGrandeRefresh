@@ -157,7 +157,7 @@ export default function Home() {
           <a className="button button-outline mt-6" href="#contact">Ask about advertising <Arrow /></a>
         </div>
       </section>
-      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
+      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Want a FREE<br />Vending Machine?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
 <label htmlFor="inquiry-name" className="font-bold text-sm">Your name</label><input id="inquiry-name" name="name" type="text" autoComplete="name" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
 <label htmlFor="inquiry-email" className="font-bold text-sm">Email</label><input id="inquiry-email" name="email" type="email" autoComplete="email" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
 <label htmlFor="inquiry-business" className="font-bold text-sm">Company / workplace</label><input id="inquiry-business" name="company" type="text" className="w-full rounded-md p-3 text-slate-900 bg-white" />
