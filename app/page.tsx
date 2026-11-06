@@ -131,7 +131,15 @@ export default function Home() {
     ))}
   </div>
   <p className="muted mt-6 text-center">Selections vary by location. Request your favorites!</p>
-  <div className="mt-6 text-center"><a className="button button-orange" href="#request-machine">Request your free machine <Arrow /></a></div>
+  <div className="mt-8 flex flex-col items-center gap-3 text-center">
+    <a
+      className="button button-orange inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl px-8 py-5 text-base font-extrabold uppercase tracking-wide shadow-[0_12px_36px_rgba(255,126,28,0.4)] ring-2 ring-orange-300/70 transition-transform hover:-translate-y-1 hover:shadow-[0_16px_42px_rgba(255,126,28,0.55)] sm:w-auto sm:text-lg"
+      href="#request-machine"
+    >
+      Request Your FREE Machine <Arrow />
+    </a>
+    <p className="muted text-sm">No equipment, installation, or maintenance cost to your business.</p>
+  </div>
 </section>
 <section className="shell section-space" aria-label="Businesses we serve">
   <div className="section-heading">
