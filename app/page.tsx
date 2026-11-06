@@ -101,6 +101,32 @@ export default function Home() {
     </article>
   </div>
 </section>
+<section id="products" className="shell section-space" aria-label="Products available in our machines">
+  <div className="section-heading">
+    <div><p className="eyebrow">SOMETHING FOR EVERY BREAK</p><h2>What’s Inside Our Machines?</h2></div>
+    <p>Fresh food, refreshing drinks, snacks, and everyday essentials for your team.</p>
+  </div>
+  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    {[
+      { icon: "🥪", name: "Fresh Food", detail: "Sandwiches, wraps and ready-to-eat options" },
+      { icon: "⚡", name: "Energy Drinks", detail: "Monster, Red Bull and other favorites" },
+      { icon: "🥤", name: "Cold Drinks", detail: "Coke, Pepsi, Gatorade and bottled water" },
+      { icon: "🍜", name: "Hot Meals", detail: "Breakfast bowls, burritos and noodles" },
+      { icon: "🍫", name: "Candy & Snacks", detail: "Snickers, Reese’s, M&M’s and more" },
+      { icon: "🥐", name: "Pastries", detail: "Honey buns and sweet treats" },
+      { icon: "🩹", name: "Everyday Essentials", detail: "Useful extras for busy workdays" },
+      { icon: "🧴", name: "Personal Care", detail: "Hygiene items and phone accessories" },
+    ].map(({ icon, name, detail }) => (
+      <article key={name} className="solution-card flex flex-col gap-3" style={{ minHeight: "205px" }}>
+        <span aria-hidden="true" style={{ fontSize: "44px", lineHeight: 1.2 }}>{icon}</span>
+        <h3 className="text-xl font-bold">{name}</h3>
+        <p>{detail}</p>
+      </article>
+    ))}
+  </div>
+  <p className="muted mt-6 text-center">Selections vary by location. Request your favorites!</p>
+  <div className="mt-6 text-center"><a className="button button-orange" href="#request-machine">Request your free machine <Arrow /></a></div>
+</section>
 <section className="shell section-space" aria-label="Businesses we serve">
   <div className="section-heading">
     <p className="eyebrow">TRUSTED LOCAL PARTNERS</p>
