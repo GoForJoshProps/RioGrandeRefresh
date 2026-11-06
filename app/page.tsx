@@ -34,14 +34,14 @@ export default function Home() {
   />
 </a>
 
-      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#solutions">Our solutions</a><a href="#easy-shopping">How to use our coolers</a><a href="#advertise">Advertising</a><a className="nav-cta" href="#request-machine">Free machine <Arrow /></a></nav>
+      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#machines">Our machines</a><a href="#easy-shopping">How to use our coolers</a><a href="#advertise">Advertising</a><a className="nav-cta" href="#request-machine">Free machine <Arrow /></a></nav>
     </header>
     <main id="main">
       <section className="shell hero grid items-center gap-10 lg:grid-cols-2">
         <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> NEW MEXICO ROOTS. A FRESHER FUTURE.</p>
           <h1>Modern Machines.<br /><span className="sunset-text">Everyday Essentials.</span></h1>
           <p className="hero-description">AI-powered vending and smart coolers for the places New Mexico works. Good things to grab. One less thing to manage.</p>
-          <div className="flex flex-wrap gap-4"><a className="button button-orange" href="#request-machine">Refresh your workplace <Arrow /></a><a className="button button-outline" href="#solutions">Explore the possibilities</a></div>
+          <div className="flex flex-wrap gap-4"><a className="button button-orange" href="#request-machine">Refresh your workplace <Arrow /></a><a className="button button-outline" href="#machines">Explore the possibilities</a></div>
           <div className="hero-footnote"><span aria-hidden="true">✦</span> Built around your business. Inspired by the Land of Enchantment.</div>
         </div>
         <Cooler />
@@ -85,18 +85,6 @@ export default function Home() {
     }
   `}</style>
 </section>
-      <section id="solutions" className="shell section-space">
-        <div className="section-heading"><div><p className="eyebrow">THE BREAK ROOM, REIMAGINED</p><h2 className="whitespace-normal text-[clamp(1.5rem,3.2vw,3rem)] leading-tight tracking-tight lg:whitespace-nowrap">Fresh options. Smarter spaces.</h2></div><p>From the first coffee break to the late shift, make room for refreshments that fit the way your team moves.</p></div>
-        <div className="grid gap-5 md:grid-cols-2">
-          <article className="solution-card"><span className="card-number">01 / INTELLIGENT CONVENIENCE</span><div className="solution-icon" aria-hidden="true">▦</div><h3>AI-powered vending</h3><p>A modern take on the everyday essential. Give your team convenient access to snacks and drinks with an intelligent vending experience.</p><a href="#contact">Find your fit <Arrow /></a></article>
-          <article className="solution-card teal-card"><span className="card-number">02 / A FRESH PERSPECTIVE</span><div className="solution-icon" aria-hidden="true">❄</div><h3>Smart coolers</h3><p>Bring a fresh selection into your workplace with connected coolers that make the refreshment stop feel effortless.</p><a href="#contact">Explore smart coolers <Arrow /></a></article>
-        </div>
-      </section>
-      <section id="how-it-works" className="process-section"><div className="shell section-space"><p className="eyebrow">LESS FRICTION. MORE REFRESHMENT.</p><h2 className="whitespace-normal text-[clamp(1.5rem,3.2vw,3rem)] leading-tight tracking-tight lg:whitespace-nowrap">Your next great break starts here.</h2><div className="grid gap-9 md:grid-cols-3 mt-12">{[
-        ['01', 'Tell us about your space', 'Share your location, team size, and what a better refreshment experience looks like for your business.'],
-        ['02', 'Find the right setup', 'We’ll talk through vending and cooler options to find an approach that works for your workplace.'],
-        ['03', 'Make room for refreshment', 'Plan the next steps with our team and bring a little more convenience to the workday.'],
-      ].map(([number,title,text]) => <article key={number} className="step"><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
       <section className="shell section-space local-section"><div><p className="eyebrow">ROOTED RIGHT HERE</p><h2>Big ideas.<br /><span className="sunset-text">New Mexico heart.</span></h2></div><div><p className="local-copy">Better breaks belong everywhere people do good work.</p><p className="muted">Rio Grande Refresh brings AI-powered vending machines and smart coolers to businesses in New Mexico. Offices, shared workspaces, and teams on the move — let’s find a fresh fit for your space.</p><span className="location-tag">⌖ &nbsp; Serving New Mexico businesses</span></div></section>
      
 <section id="machines" className="shell section-space">
