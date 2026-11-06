@@ -47,6 +47,44 @@ export default function Home() {
         <Cooler />
       </section>
       <div className="benefit-strip"><div className="shell flex flex-wrap justify-between gap-5"><span>SMART TECHNOLOGY</span><span aria-hidden="true">✦</span><span>EVERYDAY CONVENIENCE</span><span aria-hidden="true">✦</span><span>NEW MEXICO SPIRIT</span></div></div>
+      <section className="shell section-space" aria-label="Businesses we serve">
+  <div className="section-heading">
+    <p className="eyebrow">TRUSTED LOCAL PARTNERS</p>
+    <h2 className="whitespace-nowrap text-[clamp(1.15rem,3.1vw,2.65rem)] tracking-tight">Proudly Serving New Mexico Businesses</h2>
+    <p>Bringing convenient refreshments to workplaces across New Mexico.</p>
+  </div>
+  <div className="overflow-hidden py-8">
+    <div className="flex w-max items-center gap-6 animate-[clientScroll_24s_linear_infinite] motion-reduce:animate-none">
+      {Array.from({ length: 4 }, (_, group) => group).flatMap((group) =>
+        [
+          { name: "CTS", logo: "/CTS%20Logo.png" },
+          { name: "NORC", logo: "/NORCLogo_Short_Color-1.png" },
+          { name: "THE HOME DEPOT", logo: "/Home-Depot-Logo-PNG-Photos.png" },
+        ].map(({ name, logo }) => (
+          <div
+            key={group + name}
+            aria-hidden={group > 0}
+            className="solution-card flex h-28 w-56 shrink-0 items-center justify-center text-center text-2xl font-bold"
+          >
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              className="h-20 w-full object-contain"
+              style={{ display: "block", maxWidth: "180px" }}
+            />
+          </div>
+        ))
+      )}
+</div>
+</div>
+   
+  <style>{`
+    @keyframes clientScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-25%); }
+    }
+  `}</style>
+</section>
       <section id="solutions" className="shell section-space">
         <div className="section-heading"><div><p className="eyebrow">THE BREAK ROOM, REIMAGINED</p><h2 className="whitespace-normal text-[clamp(1.5rem,3.2vw,3rem)] leading-tight tracking-tight lg:whitespace-nowrap">Fresh options. Smarter spaces.</h2></div><p>From the first coffee break to the late shift, make room for refreshments that fit the way your team moves.</p></div>
         <div className="grid gap-5 md:grid-cols-2">
@@ -249,45 +287,7 @@ export default function Home() {
     <p className="muted text-sm">No equipment, installation, or maintenance cost to your business.</p>
   </div>
 </section>
-<section className="shell section-space" aria-label="Businesses we serve">
-  <div className="section-heading">
-    <p className="eyebrow">TRUSTED LOCAL PARTNERS</p>
-    <h2 className="whitespace-nowrap text-[clamp(1.15rem,3.1vw,2.65rem)] tracking-tight">Proudly Serving New Mexico Businesses</h2>
-    <p>Bringing convenient refreshments to workplaces across New Mexico.</p>
-  </div>
-  <div className="overflow-hidden py-8">
-    <div className="flex w-max items-center gap-6 animate-[clientScroll_24s_linear_infinite] motion-reduce:animate-none">
-      {Array.from({ length: 4 }, (_, group) => group).flatMap((group) =>
-        [
-          { name: "CTS", logo: "/CTS%20Logo.png" },
-          { name: "NORC", logo: "/NORCLogo_Short_Color-1.png" },
-          { name: "THE HOME DEPOT", logo: "/Home-Depot-Logo-PNG-Photos.png" },
-        ].map(({ name, logo }) => (
-          <div
-            key={group + name}
-            aria-hidden={group > 0}
-            className="solution-card flex h-28 w-56 shrink-0 items-center justify-center text-center text-2xl font-bold"
-          >
-            <img
-              src={logo}
-              alt={`${name} logo`}
-              className="h-20 w-full object-contain"
-              style={{ display: "block", maxWidth: "180px" }}
-            />
-          </div>
-        ))
-      )}
-</div>
-</div>
-   
-  <style>{`
-    @keyframes clientScroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-25%); }
-    }
-  `}</style>
-</section>
-      <section id="request-machine" className="shell section-space">
+<section id="request-machine" className="shell section-space">
         <div className="section-heading"><div><p className="eyebrow">NO-COST MACHINE PLACEMENT</p><h2>Request a free vending machine.</h2></div><p>Bring convenient snacks, drinks, and meals to your workplace without buying the equipment. We handle stocking and servicing at approved locations.</p></div>
         <div className="grid gap-5 md:grid-cols-3">
           <article className="solution-card"><span className="card-number">01 / TELL US ABOUT YOUR SPACE</span><h3>Your workplace</h3><p>Share your location, approximate employee count, and break room needs.</p></article>
