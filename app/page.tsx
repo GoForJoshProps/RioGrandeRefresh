@@ -108,17 +108,19 @@ export default function Home() {
   </div>
   <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
     {[
-      { icon: "🥪", name: "Fresh Food", detail: "Sandwiches, wraps and ready-to-eat options" },
-      { icon: "⚡", name: "Energy Drinks", detail: "Monster, Red Bull and other favorites" },
-      { icon: "🥤", name: "Cold Drinks", detail: "Coke, Pepsi, Gatorade and bottled water" },
-      { icon: "🍜", name: "Hot Meals", detail: "Breakfast bowls, burritos and noodles" },
-      { icon: "🍫", name: "Candy & Snacks", detail: "Snickers, Reese’s, M&M’s and more" },
-      { icon: "🥐", name: "Pastries", detail: "Honey buns and sweet treats" },
-      { icon: "🩹", name: "Everyday Essentials", detail: "Useful extras for busy workdays" },
-      { icon: "🧴", name: "Personal Care", detail: "Hygiene items and phone accessories" },
-    ].map(({ icon, name, detail }) => (
-      <article key={name} className="solution-card flex flex-col gap-3" style={{ minHeight: "205px" }}>
-        <span aria-hidden="true" style={{ fontSize: "44px", lineHeight: 1.2 }}>{icon}</span>
+      { name: "Fresh Food", detail: "Sandwiches, wraps and ready-to-eat options", photo: "https://unsplash.com/photos/3xVgYMGpU6k/download?force=true&w=700", alt: "Fresh sandwiches in a deli display" },
+      { name: "Energy Drinks", detail: "Monster, Red Bull and other favorites", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Energy_Drink_Display.jpg?width=700", alt: "Assorted energy drinks including Monster and Red Bull" },
+      { name: "Cold Drinks", detail: "Coke, Pepsi, Gatorade and bottled water", photo: "https://unsplash.com/photos/aHp47GFJqqw/download?force=true&w=700", alt: "Selection of colorful soda cans" },
+      { name: "Hot Meals", detail: "Breakfast bowls, burritos and noodles", photo: "https://unsplash.com/photos/3ZLDdR7x52w/download?force=true&w=700", alt: "Ready-to-heat cup noodles" },
+      { name: "Candy & Snacks", detail: "Snickers, Reese’s, M&M’s and more", photo: "https://unsplash.com/photos/fjen7b6ONyg/download?force=true&w=700", alt: "Assorted chocolate candy bars" },
+      { name: "Pastries", detail: "Honey buns and sweet treats", photo: "https://unsplash.com/photos/wp3yOyh0xB4/download?force=true&w=700", alt: "Fresh pastries and sweet baked goods" },
+      { name: "Everyday Essentials", detail: "Useful extras for busy workdays", photo: "https://unsplash.com/photos/eWK6EF5q6pc/download?force=true&w=700", alt: "Phone charging cable and power adapter" },
+      { name: "Personal Care", detail: "Hygiene items and personal care products", photo: "https://unsplash.com/photos/_mbxGy83-so/download?force=true&w=700", alt: "Assorted personal hygiene products" },
+    ].map(({ name, detail, photo, alt }) => (
+      <article key={name} className="solution-card flex flex-col gap-3 overflow-hidden" style={{ minHeight: "290px" }}>
+        <div className="overflow-hidden rounded-xl" style={{ height: "160px", backgroundColor: "#153d43" }}>
+          <img src={photo} alt={alt} loading="lazy" className="h-full w-full object-cover" referrerPolicy="no-referrer" />
+        </div>
         <h3 className="text-xl font-bold">{name}</h3>
         <p>{detail}</p>
       </article>
