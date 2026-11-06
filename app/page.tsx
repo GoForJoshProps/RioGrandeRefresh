@@ -102,23 +102,28 @@ export default function Home() {
   </div>
 </section>
 <section id="easy-shopping" className="shell section-space" aria-label="How to shop our smart coolers">
-  <div className="section-heading">
-    <div>
-      <p className="eyebrow">TAP. OPEN. GRAB. GO.</p>
-      <h2>Using Our Smart Coolers Is That Easy.</h2>
-    </div>
-    <p>No cash, no buttons, no scanning every item. Just the refreshments you want, in seconds.</p>
+  <div className="mb-10">
+    <p className="eyebrow">TAP. OPEN. GRAB. GO.</p>
+    <h2 className="mt-3 whitespace-normal text-[clamp(1.5rem,3.25vw,3rem)] font-bold leading-tight tracking-tight lg:whitespace-nowrap">Using Our Smart Coolers Is That Easy.</h2>
+    <p className="muted mt-4 max-w-2xl">No cash, no buttons, no scanning every item. Just the refreshments you want, in seconds.</p>
   </div>
   <div className="grid gap-5 md:grid-cols-4">
     {[
-      { number: "01", symbol: "▣", title: "Tap to start", description: "Tap or insert your payment card at the cooler's payment terminal to begin." },
-      { number: "02", symbol: "↗", title: "Open the door", description: "Once the cooler unlocks, open it and browse the selection." },
-      { number: "03", symbol: "✦", title: "Take what you want", description: "Grab a drink, a snack, or a meal. Take more than one item if you'd like." },
-      { number: "04", symbol: "✓", title: "Close & go", description: "Close the door when you're done. The smart cooler automatically charges you for the items you took." },
-    ].map(({ number, symbol, title, description }) => (
+      { number: "01", title: "Tap to start", description: "Tap or insert your payment card at the cooler's payment terminal to begin." },
+      { number: "02", title: "Open the door", description: "Once the cooler unlocks, open it and browse the selection." },
+      { number: "03", title: "Take what you want", description: "Grab a drink, a snack, or a meal. Take more than one item if you'd like." },
+      { number: "04", title: "Close & go", description: "Close the door when you're done. The smart cooler automatically charges you for the items you took." },
+    ].map(({ number, title, description }, index) => (
       <article key={number} className="solution-card flex flex-col gap-3">
         <span className="card-number">{number} / SIMPLE SHOPPING</span>
-        <div className="solution-icon" aria-hidden="true">{symbol}</div>
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-teal-400/40 bg-teal-400/10 text-teal-300" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
+            {index === 0 ? <><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M7 15h4"/></> :
+             index === 1 ? <><path d="M5 21V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17"/><path d="M3 21h18M15 12h.01"/></> :
+             index === 2 ? <><path d="M4 8h16l-1.4 12H5.4L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></> :
+             <><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></>}
+          </svg>
+        </div>
         <h3 className="text-xl font-bold">{title}</h3>
         <p>{description}</p>
       </article>
