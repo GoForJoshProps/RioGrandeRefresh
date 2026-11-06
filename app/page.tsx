@@ -287,14 +287,39 @@ export default function Home() {
         <a className="button button-orange mt-6" href="#contact">Request a machine <Arrow /></a>
       </section>
       <section id="advertise" className="process-section">
-        <div className="shell section-space">
-          <p className="eyebrow">ADVERTISE WITH RIO GRANDE REFRESH</p>
-          <h2>Your business. Our screens.</h2>
-          <p className="muted mt-6 max-w-2xl">Put your local business in front of customers with rotating digital ads on participating vending machine screens. Ask about available placements, five-second spots, and annual advertising options.</p>
-          <a className="button button-outline mt-6" href="#contact">Ask about advertising <Arrow /></a>
+  <div className="shell section-space">
+    <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div>
+        <p className="eyebrow">ADVERTISE WITH RIO GRANDE REFRESH</p>
+        <h2 className="text-[clamp(2rem,4.2vw,3.5rem)] leading-tight">Your Business. <span className="sunset-text">Our Screens.</span><br />More Local Exposure.</h2>
+        <p className="muted mt-6 max-w-xl">Put your business in front of customers where they work and take their breaks. Our smart vending screens feature rotating digital advertisements throughout the day.</p>
+        <div className="mt-7 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          {[
+            { number: "01", title: "5-Second Digital Ads", text: "Short, eye-catching spots designed for quick attention." },
+            { number: "02", title: "Rotating Throughout the Day", text: "Your ad shares screen time with other participating advertisers." },
+            { number: "03", title: "Reach Local Workplaces", text: "Get your business seen by customers at participating vending locations." },
+          ].map(({ number, title, text }) => (
+            <div key={number} className="flex items-start gap-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-teal-400/40 bg-teal-400/10 text-sm font-bold text-teal-300">{number}</span>
+              <div><h3 className="mb-1 text-lg font-bold">{title}</h3><p className="muted text-sm">{text}</p></div>
+            </div>
+          ))}
         </div>
-      </section>
-      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Want a FREE<br />Vending Machine?</h2><p>Get a modern AI vending machine for your workplace at absolutely no cost. We handle installation, stocking, cleaning, and maintenance. You provide the space, and we handle the rest!</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
+        <a className="button button-orange mt-8" href="#contact">Advertise Your Business Today <Arrow /></a>
+        <p className="muted mt-3 text-sm">Ask us about available screen placements and annual advertising options.</p>
+      </div>
+      <div className="relative mx-auto w-full max-w-lg rounded-3xl border border-teal-400/30 bg-[#172e30] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.35)] sm:p-6">
+        <div className="absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-br from-teal-400/15 to-orange-400/15 blur-xl" aria-hidden="true" />
+        <div className="overflow-hidden rounded-2xl bg-[#0d1b1e]">
+          <img src="/advertising-pos-screen.jpg" alt="Rio Grande Refresh advertisement displayed on an actual PAX vending cooler payment screen" className="w-full object-contain" onError={(event) => { event.currentTarget.style.display = "none"; }} />
+          <div className="px-6 py-10 text-center text-sm text-teal-200">See your brand on our digital screens.</div>
+        </div>
+        <p className="muted mt-4 text-center text-xs">Actual Rio Grande Refresh digital advertising screen</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Want a FREE<br />Vending Machine?</h2><p>Get a modern AI vending machine for your workplace at absolutely no cost. We handle installation, stocking, cleaning, and maintenance. You provide the space, and we handle the rest!</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
 <label htmlFor="inquiry-name" className="font-bold text-sm">Your name</label><input id="inquiry-name" name="name" type="text" autoComplete="name" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
 <label htmlFor="inquiry-email" className="font-bold text-sm">Email</label><input id="inquiry-email" name="email" type="email" autoComplete="email" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
 <label htmlFor="inquiry-business" className="font-bold text-sm">Company / workplace</label><input id="inquiry-business" name="company" type="text" className="w-full rounded-md p-3 text-slate-900 bg-white" />
