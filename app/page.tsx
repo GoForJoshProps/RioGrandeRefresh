@@ -288,11 +288,13 @@ export default function Home() {
       </section>
       <section id="advertise" className="process-section">
   <div className="shell section-space">
-    <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,340px)]">
+    <div className="mb-9">
+      <p className="eyebrow">ADVERTISE WITH RIO GRANDE REFRESH</p>
+      <h2 className="mt-3 text-[clamp(1.4rem,2.8vw,2.65rem)] leading-tight tracking-tight lg:whitespace-nowrap">Your Business. <span className="sunset-text">Our Screens.</span> More Local Exposure.</h2>
+    </div>
+    <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)]">
       <div>
-        <p className="eyebrow">ADVERTISE WITH RIO GRANDE REFRESH</p>
-        <h2 className="text-[clamp(1.35rem,2.1vw,2rem)] leading-tight tracking-tight">Your Business. <span className="sunset-text">Our Screens.</span> More Local Exposure.</h2>
-        <p className="muted mt-6 max-w-xl">Put your business in front of customers where they work and take their breaks. Our smart vending screens feature rotating digital advertisements throughout the day.</p>
+        <p className="muted max-w-xl">Put your business in front of customers where they work and take their breaks. Our smart vending screens feature rotating digital advertisements throughout the day.</p>
         <div className="mt-7 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           {[
             { number: "01", title: "5-Second Digital Ads", text: "Short, eye-catching spots designed for quick attention." },
@@ -308,7 +310,7 @@ export default function Home() {
         <a className="button button-orange mt-8" href="#contact">Advertise Your Business Today <Arrow /></a>
         <p className="muted mt-3 text-sm">Ask us about available screen placements and annual advertising options.</p>
       </div>
-      <div className="relative mx-auto w-full max-w-[340px] rounded-3xl border border-teal-400/30 bg-[#172e30] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.35)] sm:p-6">
+      <div className="relative mx-auto w-full max-w-[440px] rounded-3xl border border-teal-400/30 bg-[#172e30] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.35)] sm:p-6">
         <div className="absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-br from-teal-400/15 to-orange-400/15 blur-xl" aria-hidden="true" />
         <div className="overflow-hidden rounded-2xl bg-[#0d1b1e]">
           <img src="/advertising-pos-screen.jpg" alt="Rio Grande Refresh advertisement displayed on an actual PAX vending cooler payment screen" className="w-full object-contain" />
