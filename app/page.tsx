@@ -140,6 +140,45 @@ export default function Home() {
     <p className="muted text-sm">Tell us about your workplace and we'll help you find the right fit.</p>
   </div>
 </section>
+<section id="businesses-we-serve" className="shell section-space" aria-label="Businesses we serve">
+  <div className="section-heading">
+    <div>
+      <p className="eyebrow">BUILT FOR YOUR WORKPLACE</p>
+      <h2 className="text-[clamp(1.7rem,3.4vw,3rem)] leading-tight tracking-tight">Businesses <span className="sunset-text">We Serve.</span></h2>
+    </div>
+    <p>From early shifts to late nights, our smart vending solutions bring convenient refreshments to the places New Mexico works, lives, and gathers.</p>
+  </div>
+  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      { number: "01", title: "Manufacturing & Warehouses", description: "Keep busy crews fueled across shifts with quick access to cold drinks, filling meals, and grab-and-go snacks.", kind: "factory" },
+      { number: "02", title: "Call Centers & Offices", description: "Make short breaks more convenient with refreshments right where employees work—without leaving the building.", kind: "office" },
+      { number: "03", title: "Apartment Communities", description: "Give residents an easy way to pick up drinks, snacks, and everyday essentials without making another trip.", kind: "home" },
+      { number: "04", title: "Hotels & Hospitality", description: "Offer guests convenient options for late arrivals, early departures, and everything in between.", kind: "hotel" },
+      { number: "05", title: "Healthcare & Medical Offices", description: "Help staff, patients, and visitors find convenient refreshments during busy days and long shifts.", kind: "health" },
+      { number: "06", title: "Gyms & Fitness Centers", description: "Offer members refreshing drinks, protein-forward snacks, and convenient post-workout options.", kind: "fitness" },
+    ].map(({ number, title, description, kind }) => (
+      <article key={number} className="solution-card flex flex-col gap-3">
+        <span className="card-number">{number} / WHERE WE FIT</span>
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-teal-400/40 bg-teal-400/10 text-teal-300" aria-hidden="true">
+          <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
+            {kind === "factory" ? <><path d="M3 21V10l6 4v-4l6 4V5h6v16H3Z"/><path d="M7 18h1M12 18h1M17 18h1"/></> :
+             kind === "office" ? <><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/></> :
+             kind === "home" ? <><path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/></> :
+             kind === "hotel" ? <><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M2 21h20M9 21v-5h6v5M8 8h2M14 8h2M8 12h2M14 12h2"/></> :
+             kind === "health" ? <><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 7v10M7 12h10"/></> :
+             <><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/></>}
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p>{description}</p>
+      </article>
+    ))}
+  </div>
+  <div className="mt-8 flex flex-col items-center gap-3 text-center">
+    <p className="muted">Don't see your type of business? We can help you explore the right setup for your space.</p>
+    <a className="button button-orange inline-flex items-center justify-center gap-3 px-8 py-4 font-bold" href="#request-machine">See If Your Location Qualifies <Arrow /></a>
+  </div>
+</section>
 <section id="easy-shopping" className="shell section-space" aria-label="How to shop our smart coolers">
   <div className="mb-10">
     <p className="eyebrow">TAP. OPEN. GRAB. GO.</p>
