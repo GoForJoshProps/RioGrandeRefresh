@@ -109,12 +109,12 @@ export default function Home() {
   <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
     {[
       { name: "Fresh Food", detail: "Sandwiches, wraps and ready-to-eat options", photo: "https://unsplash.com/photos/3xVgYMGpU6k/download?force=true&w=700", alt: "Fresh sandwiches in a deli display" },
-      { name: "Energy Drinks", detail: "Monster, Red Bull and other favorites", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Energy_Drink_Display.jpg?width=700", alt: "Assorted energy drinks including Monster and Red Bull" },
-      { name: "Cold Drinks", detail: "Coke, Pepsi, Gatorade and bottled water", photo: "https://unsplash.com/photos/aHp47GFJqqw/download?force=true&w=700", alt: "Selection of colorful soda cans" },
-      { name: "Hot Meals", detail: "Breakfast bowls, burritos and noodles", photo: "https://unsplash.com/photos/3ZLDdR7x52w/download?force=true&w=700", alt: "Ready-to-heat cup noodles" },
+      { name: "Energy Drinks", detail: "Monster, Red Bull and other favorites", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/LatasMonster.jpg?width=700", alt: "Monster Energy cans" },
+      { name: "Cold Drinks", detail: "Coke, Pepsi, Gatorade and bottled water", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_%26_pepsi.jpg?width=700", alt: "Coca-Cola and Pepsi drinks" },
+      { name: "Hot Meals", detail: "Breakfast bowls, burritos and noodles", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Cup_of_instant_noodles.jpg?width=700", alt: "Cup of instant noodles" },
       { name: "Candy & Snacks", detail: "Snickers, Reese’s, M&M’s and more", photo: "https://unsplash.com/photos/fjen7b6ONyg/download?force=true&w=700", alt: "Assorted chocolate candy bars" },
       { name: "Pastries", detail: "Honey buns and sweet treats", photo: "https://unsplash.com/photos/wp3yOyh0xB4/download?force=true&w=700", alt: "Fresh pastries and sweet baked goods" },
-      { name: "Everyday Essentials", detail: "Useful extras for busy workdays", photo: "https://unsplash.com/photos/eWK6EF5q6pc/download?force=true&w=700", alt: "Phone charging cable and power adapter" },
+      { name: "Everyday Essentials", detail: "Useful extras for busy workdays", photo: "https://commons.wikimedia.org/wiki/Special:FilePath/Advil_200mg_Caplets.jpg?width=700", alt: "Advil caplets product packaging" },
       { name: "Personal Care", detail: "Hygiene items and personal care products", photo: "https://unsplash.com/photos/_mbxGy83-so/download?force=true&w=700", alt: "Assorted personal hygiene products" },
     ].map(({ name, detail, photo, alt }) => (
       <article key={name} className="solution-card flex flex-col gap-3 overflow-hidden" style={{ minHeight: "290px" }}>
@@ -127,6 +127,7 @@ export default function Home() {
     ))}
   </div>
   <p className="muted mt-6 text-center">Selections vary by location. Request your favorites!</p>
+  <p className="muted mt-3 text-center text-xs">Photo credits: <a href="https://commons.wikimedia.org/wiki/File:LatasMonster.jpg" target="_blank" rel="noopener noreferrer">Monster cans</a>, <a href="https://commons.wikimedia.org/wiki/File:Coca-Cola_%26_pepsi.jpg" target="_blank" rel="noopener noreferrer">Coke &amp; Pepsi</a>, <a href="https://commons.wikimedia.org/wiki/File:Cup_of_instant_noodles.jpg" target="_blank" rel="noopener noreferrer">Cup noodles</a>, <a href="https://commons.wikimedia.org/wiki/File:Advil_200mg_Caplets.jpg" target="_blank" rel="noopener noreferrer">Advil</a> (Wikimedia Commons; see links for authors and licenses).</p>
   <div className="mt-6 text-center"><a className="button button-orange" href="#request-machine">Request your free machine <Arrow /></a></div>
 </section>
 <section className="shell section-space" aria-label="Businesses we serve">
