@@ -311,7 +311,7 @@ export default function Home() {
       <div className="relative mx-auto w-full max-w-lg rounded-3xl border border-teal-400/30 bg-[#172e30] p-4 shadow-[0_20px_70px_rgba(0,0,0,0.35)] sm:p-6">
         <div className="absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-br from-teal-400/15 to-orange-400/15 blur-xl" aria-hidden="true" />
         <div className="overflow-hidden rounded-2xl bg-[#0d1b1e]">
-          <img src="/advertising-pos-screen.jpg" alt="Rio Grande Refresh advertisement displayed on an actual PAX vending cooler payment screen" className="w-full object-contain" onError={(event) => { event.currentTarget.style.display = "none"; }} />
+          <img src="/advertising-pos-screen.jpg.jpg" alt="Rio Grande Refresh advertisement displayed on an actual PAX vending cooler payment screen" className="w-full object-contain" onError={(event) => { event.currentTarget.style.display = "none"; }} />
           <div className="px-6 py-10 text-center text-sm text-teal-200">See your brand on our digital screens.</div>
         </div>
         <p className="muted mt-4 text-center text-xs">Actual Rio Grande Refresh digital advertising screen</p>
