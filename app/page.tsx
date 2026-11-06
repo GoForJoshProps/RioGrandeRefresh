@@ -101,7 +101,35 @@ export default function Home() {
     </article>
   </div>
 </section>
- <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><a className="button button-dark" href={`mailto:${email}?subject=Refresh%20my%20workplace`}>Start a conversation <Arrow /></a><a className="font-bold" href="tel:+15059200299">(505) 920-0299</a></div><a className="inline-block mt-5 text-sm break-all" href={`mailto:${email}`}>{email}</a></div></section>
+<section className="shell section-space" aria-label="Businesses we serve">
+  <div className="section-heading">
+    <p className="eyebrow">TRUSTED LOCAL PARTNERS</p>
+    <h2>Proudly Serving New Mexico Businesses</h2>
+    <p>Bringing convenient refreshments to workplaces across New Mexico.</p>
+  </div>
+  <div className="overflow-hidden py-8">
+    <div className="flex w-max items-center gap-6 animate-[clientScroll_24s_linear_infinite] motion-reduce:animate-none">
+      {Array.from({ length: 4 }).flatMap((_, group) =>
+        ["CTS", "NORC", "THE HOME DEPOT"].map((name) => (
+          <div
+            key={group + name}
+            aria-hidden={group > 0}
+            className="solution-card flex h-28 w-56 shrink-0 items-center justify-center text-center text-2xl font-bold"
+          >
+            {name}
+          </div>
+        ))
+      )}
+    </div>
+  </div>
+  <style>{`
+    @keyframes clientScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-25%); }
+    }
+  `}</style>
+</section>
+      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><a className="button button-dark" href={`mailto:${email}?subject=Refresh%20my%20workplace`}>Start a conversation <Arrow /></a><a className="font-bold" href="tel:+15059200299">(505) 920-0299</a></div><a className="inline-block mt-5 text-sm break-all" href={`mailto:${email}`}>{email}</a></div></section>
     </main>
     <footer className="shell flex flex-wrap justify-between items-center gap-6 py-9"><a className="wordmark" href="#">RIO GRANDE <small>REFRESH</small></a><p className="text-sm muted">© {new Date().getFullYear()} Rio Grande Refresh · New Mexico</p><a className="text-sm" href="#main">Back to top ↑</a></footer>
   </>;
