@@ -128,7 +128,8 @@ export default function Home() {
 <img
   src={logo}
   alt={`${name} logo`}
-  className="h-20 w-full object-contain"
+ className="h-20 w-full object-contain"
+style={{ display: "block", maxWidth: "180px" }}
 />
  
           </div>
