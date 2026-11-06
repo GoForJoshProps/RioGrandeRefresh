@@ -133,10 +133,12 @@ style={{ display: "block", maxWidth: "180px" }}
 />
  
           </div>
-        ))
-      )}
-    </div>
-  </div>
+     
+))
+)}
+</div>
+</div>
+   
   <style>{`
     @keyframes clientScroll {
       from { transform: translateX(0); }
