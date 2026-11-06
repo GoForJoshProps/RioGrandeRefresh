@@ -34,7 +34,7 @@ export default function Home() {
   />
 </a>
 
-      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#solutions">Our solutions</a><a href="#how-it-works">How it works</a><a href="#advertise">Advertising</a><a className="nav-cta" href="#request-machine">Free machine <Arrow /></a></nav>
+      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#solutions">Our solutions</a><a href="#easy-shopping">How to use our coolers</a><a href="#advertise">Advertising</a><a className="nav-cta" href="#request-machine">Free machine <Arrow /></a></nav>
     </header>
     <main id="main">
       <section className="shell hero grid items-center gap-10 lg:grid-cols-2">
@@ -100,6 +100,31 @@ export default function Home() {
       </p>
     </article>
   </div>
+</section>
+<section id="easy-shopping" className="shell section-space" aria-label="How to shop our smart coolers">
+  <div className="section-heading">
+    <div>
+      <p className="eyebrow">TAP. OPEN. GRAB. GO.</p>
+      <h2>Using Our Smart Coolers Is That Easy.</h2>
+    </div>
+    <p>No cash, no buttons, no scanning every item. Just the refreshments you want, in seconds.</p>
+  </div>
+  <div className="grid gap-5 md:grid-cols-4">
+    {[
+      { number: "01", symbol: "▣", title: "Tap to start", description: "Tap or insert your payment card at the cooler's payment terminal to begin." },
+      { number: "02", symbol: "↗", title: "Open the door", description: "Once the cooler unlocks, open it and browse the selection." },
+      { number: "03", symbol: "✦", title: "Take what you want", description: "Grab a drink, a snack, or a meal. Take more than one item if you'd like." },
+      { number: "04", symbol: "✓", title: "Close & go", description: "Close the door when you're done. The smart cooler automatically charges you for the items you took." },
+    ].map(({ number, symbol, title, description }) => (
+      <article key={number} className="solution-card flex flex-col gap-3">
+        <span className="card-number">{number} / SIMPLE SHOPPING</span>
+        <div className="solution-icon" aria-hidden="true">{symbol}</div>
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p>{description}</p>
+      </article>
+    ))}
+  </div>
+  <p className="muted mt-6 text-center">No checkout line or item-by-item scanning. Payment is processed automatically after you close the door.</p>
 </section>
 <section id="products" className="shell section-space" aria-label="Products available in our machines">
   <div className="section-heading">
