@@ -139,7 +139,15 @@ export default function Home() {
     }
   `}</style>
 </section>
-      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><a className="button button-dark" href={`mailto:${email}?subject=Refresh%20my%20workplace`}>Start a conversation <Arrow /></a><a className="font-bold" href="tel:+15059200299">(505) 920-0299</a></div><a className="inline-block mt-5 text-sm break-all" href={`mailto:${email}`}>{email}</a></div></section>
+      <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Ready for a<br />better break?</h2><p>Let’s talk about your business and what’s possible.</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
+<label htmlFor="inquiry-name" className="font-bold text-sm">Your name</label><input id="inquiry-name" name="name" type="text" autoComplete="name" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
+<label htmlFor="inquiry-email" className="font-bold text-sm">Email</label><input id="inquiry-email" name="email" type="email" autoComplete="email" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
+<label htmlFor="inquiry-business" className="font-bold text-sm">Company / workplace</label><input id="inquiry-business" name="company" type="text" className="w-full rounded-md p-3 text-slate-900 bg-white" />
+<label htmlFor="inquiry-phone" className="font-bold text-sm">Phone (optional)</label><input id="inquiry-phone" name="phone" type="tel" className="w-full rounded-md p-3 text-slate-900 bg-white" />
+<label htmlFor="inquiry-type" className="font-bold text-sm">How can we help?</label><select id="inquiry-type" name="inquiry_type" required defaultValue="" className="w-full rounded-md p-3 text-slate-900 bg-white"><option value="" disabled>Select a topic</option><option>Request a free machine</option><option>Advertise on vending screens</option><option>General question</option></select>
+<label htmlFor="inquiry-message" className="font-bold text-sm">Message</label><textarea id="inquiry-message" name="message" rows={4} required className="w-full rounded-md p-3 text-slate-900 bg-white" />
+<button className="button button-dark cursor-pointer" type="submit">Send inquiry <Arrow /></button>
+</form><a className="font-bold" href="tel:+15059200299">(505) 920-0299</a></div><a className="inline-block mt-5 text-sm break-all" href={`mailto:${email}`}>{email}</a></div></section>
     </main>
     <footer className="shell flex flex-wrap justify-between items-center gap-6 py-9"><a className="wordmark" href="#">RIO GRANDE <small>REFRESH</small></a><p className="text-sm muted">© {new Date().getFullYear()} Rio Grande Refresh · New Mexico</p><a className="text-sm" href="#main">Back to top ↑</a></footer>
   </>;
