@@ -112,15 +112,15 @@ export default function Home() {
       { name: "Energy Drinks", x: "35%", y: "49.9%" },
       { name: "Cold Drinks", x: "66.6%", y: "49.9%" },
       { name: "Hot Meals", x: "98.5%", y: "49.9%" },
-      { name: "Candy & Snacks", x: "1.8%", y: "72.3%" },
-      { name: "Pastries", x: "35%", y: "72.3%" },
-      { name: "Everyday Essentials", x: "66.6%", y: "72.3%" },
-      { name: "Personal Care", x: "98.5%", y: "72.3%" },
+      { name: "Candy & Snacks", x: "1.8%", y: "71.3%" },
+      { name: "Pastries", x: "35%", y: "71.3%" },
+      { name: "Everyday Essentials", x: "66.6%", y: "71.3%" },
+      { name: "Personal Care", x: "98.5%", y: "71.3%" },
     ].map(({ name, x, y }) => (
       <div key={name} role="img" aria-label={`Rio Grande Refresh product selection: ${name}`}
         className="w-full rounded-2xl"
         style={{
-          aspectRatio: "243 / 270",
+          aspectRatio: name === "Candy & Snacks" || name === "Pastries" || name === "Everyday Essentials" || name === "Personal Care" ? "243 / 255" : "243 / 270",
           backgroundImage: 'url("/product-gallery.png.png")',
           backgroundRepeat: "no-repeat",
           backgroundSize: "421.4% auto",
