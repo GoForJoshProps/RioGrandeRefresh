@@ -85,6 +85,47 @@ export default function Home() {
     }
   `}</style>
 </section>
+<section id="products" className="shell section-space" aria-label="Products available in our machines">
+  <div className="section-heading">
+    <div><p className="eyebrow">SOMETHING FOR EVERY BREAK</p><h2>What’s Inside Our Machines?</h2></div>
+    <p>Fresh food, refreshing drinks, snacks, and everyday essentials for your team.</p>
+  </div>
+  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {[
+      { name: "Fresh Food", x: "1.8%", y: "49.9%" },
+      { name: "Energy Drinks", x: "35%", y: "49.9%" },
+      { name: "Cold Drinks", x: "66.6%", y: "49.9%" },
+      { name: "Hot Meals", x: "98.5%", y: "49.9%" },
+      { name: "Candy & Snacks", x: "1.8%", y: "71.3%" },
+      { name: "Pastries", x: "35%", y: "71.3%" },
+      { name: "Everyday Essentials", x: "66.6%", y: "71.3%" },
+      { name: "Personal Care", x: "98.5%", y: "71.3%" },
+    ].map(({ name, x, y }) => (
+      <div key={name} role="img" aria-label={`Rio Grande Refresh product selection: ${name}`}
+        className="w-full rounded-2xl"
+        style={{
+          aspectRatio: name === "Candy & Snacks" || name === "Pastries" || name === "Everyday Essentials" || name === "Personal Care" ? "243 / 255" : "243 / 270",
+          backgroundImage: 'url("/product-gallery.png.png")',
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "421.4% auto",
+          backgroundPosition: `${x} ${y}`,
+          backgroundColor: "#001e23",
+        }}
+      />
+    ))}
+  </div>
+  <p className="muted mt-6 text-center">Selections vary by location. Request your favorites!</p>
+  <div className="mt-8 flex flex-col items-center gap-3 text-center">
+    <a
+      className="button button-orange inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl px-8 py-5 text-base font-extrabold uppercase tracking-wide shadow-[0_12px_36px_rgba(255,126,28,0.4)] ring-2 ring-orange-300/70 transition-transform hover:-translate-y-1 hover:shadow-[0_16px_42px_rgba(255,126,28,0.55)] sm:w-auto sm:text-lg"
+      href="#request-machine"
+    >
+      Request Your FREE Machine <Arrow />
+    </a>
+    <p className="muted text-sm">No equipment, installation, or maintenance cost to your business.</p>
+  </div>
+</section>
+
       <section className="shell section-space local-section"><div><p className="eyebrow">ROOTED RIGHT HERE</p><h2>Big ideas.<br /><span className="sunset-text">New Mexico heart.</span></h2></div><div><p className="local-copy">Better breaks belong everywhere people do good work.</p><p className="muted">Rio Grande Refresh brings AI-powered vending machines and smart coolers to businesses in New Mexico. Offices, shared workspaces, and teams on the move — let’s find a fresh fit for your space.</p><span className="location-tag">⌖ &nbsp; Serving New Mexico businesses</span></div></section>
      
 <section id="machines" className="shell section-space">
@@ -234,46 +275,6 @@ export default function Home() {
     ))}
   </div>
   <p className="muted mt-6 text-center">No checkout line or item-by-item scanning. Payment is processed automatically after you close the door.</p>
-</section>
-<section id="products" className="shell section-space" aria-label="Products available in our machines">
-  <div className="section-heading">
-    <div><p className="eyebrow">SOMETHING FOR EVERY BREAK</p><h2>What’s Inside Our Machines?</h2></div>
-    <p>Fresh food, refreshing drinks, snacks, and everyday essentials for your team.</p>
-  </div>
-  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    {[
-      { name: "Fresh Food", x: "1.8%", y: "49.9%" },
-      { name: "Energy Drinks", x: "35%", y: "49.9%" },
-      { name: "Cold Drinks", x: "66.6%", y: "49.9%" },
-      { name: "Hot Meals", x: "98.5%", y: "49.9%" },
-      { name: "Candy & Snacks", x: "1.8%", y: "71.3%" },
-      { name: "Pastries", x: "35%", y: "71.3%" },
-      { name: "Everyday Essentials", x: "66.6%", y: "71.3%" },
-      { name: "Personal Care", x: "98.5%", y: "71.3%" },
-    ].map(({ name, x, y }) => (
-      <div key={name} role="img" aria-label={`Rio Grande Refresh product selection: ${name}`}
-        className="w-full rounded-2xl"
-        style={{
-          aspectRatio: name === "Candy & Snacks" || name === "Pastries" || name === "Everyday Essentials" || name === "Personal Care" ? "243 / 255" : "243 / 270",
-          backgroundImage: 'url("/product-gallery.png.png")',
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "421.4% auto",
-          backgroundPosition: `${x} ${y}`,
-          backgroundColor: "#001e23",
-        }}
-      />
-    ))}
-  </div>
-  <p className="muted mt-6 text-center">Selections vary by location. Request your favorites!</p>
-  <div className="mt-8 flex flex-col items-center gap-3 text-center">
-    <a
-      className="button button-orange inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl px-8 py-5 text-base font-extrabold uppercase tracking-wide shadow-[0_12px_36px_rgba(255,126,28,0.4)] ring-2 ring-orange-300/70 transition-transform hover:-translate-y-1 hover:shadow-[0_16px_42px_rgba(255,126,28,0.55)] sm:w-auto sm:text-lg"
-      href="#request-machine"
-    >
-      Request Your FREE Machine <Arrow />
-    </a>
-    <p className="muted text-sm">No equipment, installation, or maintenance cost to your business.</p>
-  </div>
 </section>
 <section id="request-machine" className="shell section-space">
         <div className="section-heading"><div><p className="eyebrow">NO-COST MACHINE PLACEMENT</p><h2>Request a free vending machine.</h2></div><p>Bring convenient snacks, drinks, and meals to your workplace without buying the equipment. We handle stocking and servicing at approved locations.</p></div>
