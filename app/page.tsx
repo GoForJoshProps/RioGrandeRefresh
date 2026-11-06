@@ -101,6 +101,45 @@ export default function Home() {
     </article>
   </div>
 </section>
+<section id="why-choose-us" className="shell section-space" aria-label="Why choose Rio Grande Refresh">
+  <div className="section-heading">
+    <div>
+      <p className="eyebrow">LOCAL SERVICE. SMARTER REFRESHMENTS.</p>
+      <h2 className="text-[clamp(1.7rem,3.4vw,3rem)] leading-tight tracking-tight">Why Choose <span className="sunset-text">Rio Grande Refresh?</span></h2>
+    </div>
+    <p>We handle the machines, products, and upkeep, so your team can enjoy better breaks without adding work to your day.</p>
+  </div>
+  <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      { number: "01", title: "Free Machine Placement", description: "For qualifying workplaces, we provide and install the machine at no equipment cost to your business." },
+      { number: "02", title: "No Spoilage Responsibility", description: "We manage product dates and inventory. Your business isn't billed for unsold or expired items." },
+      { number: "03", title: "Real-Time Monitoring", description: "Our connected machines help us track inventory and identify when products need attention or restocking." },
+      { number: "04", title: "Reliable Restocking & Care", description: "We stock, clean, and maintain our machines, with service tailored to your location's needs." },
+      { number: "05", title: "Customized Selections", description: "From energy drinks and fresh food to snacks and everyday essentials, we listen to what your team wants." },
+      { number: "06", title: "Locally Owned & Responsive", description: "Proudly serving New Mexico businesses with personal communication and hands-on support." },
+    ].map(({ number, title, description }) => (
+      <article key={number} className="solution-card flex flex-col gap-3">
+        <span className="card-number">{number} / THE RIO GRANDE DIFFERENCE</span>
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-teal-400/40 bg-teal-400/10 text-teal-300" aria-hidden="true">
+          <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+            {number === "01" ? <><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M9 17h6"/></> :
+             number === "02" ? <><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></> :
+             number === "03" ? <><path d="M3 19V5M3 19h18M7 15l4-4 3 2 5-6"/></> :
+             number === "04" ? <><path d="M4 7h16M4 12h16M4 17h10"/><path d="m17 17 2 2 3-4"/></> :
+             number === "05" ? <><path d="M4 7h16M7 12h10M10 17h4"/><circle cx="9" cy="7" r="2" fill="currentColor"/><circle cx="15" cy="12" r="2" fill="currentColor"/></> :
+             <><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></>}
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p>{description}</p>
+      </article>
+    ))}
+  </div>
+  <div className="mt-8 flex flex-col items-center gap-3 text-center">
+    <a className="button button-orange inline-flex items-center justify-center gap-3 px-8 py-4 font-bold" href="#request-machine">Request Your FREE Machine <Arrow /></a>
+    <p className="muted text-sm">Tell us about your workplace and we'll help you find the right fit.</p>
+  </div>
+</section>
 <section id="easy-shopping" className="shell section-space" aria-label="How to shop our smart coolers">
   <div className="mb-10">
     <p className="eyebrow">TAP. OPEN. GRAB. GO.</p>
