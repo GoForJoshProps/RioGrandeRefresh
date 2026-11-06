@@ -54,7 +54,7 @@ export default function Home() {
           <article className="solution-card teal-card"><span className="card-number">02 / A FRESH PERSPECTIVE</span><div className="solution-icon" aria-hidden="true">❄</div><h3>Smart coolers</h3><p>Bring a fresh selection into your workplace with connected coolers that make the refreshment stop feel effortless.</p><a href="#contact">Explore smart coolers <Arrow /></a></article>
         </div>
       </section>
-      <section id="how-it-works" className="process-section"><div className="shell section-space"><p className="eyebrow">LESS FRICTION. MORE REFRESHMENT.</p><h2>Your next great break<br />starts here.</h2><div className="grid gap-9 md:grid-cols-3 mt-12">{[
+      <section id="how-it-works" className="process-section"><div className="shell section-space"><p className="eyebrow">LESS FRICTION. MORE REFRESHMENT.</p><h2 className="whitespace-normal text-[clamp(1.5rem,3.2vw,3rem)] leading-tight tracking-tight lg:whitespace-nowrap">Your next great break starts here.</h2><div className="grid gap-9 md:grid-cols-3 mt-12">{[
         ['01', 'Tell us about your space', 'Share your location, team size, and what a better refreshment experience looks like for your business.'],
         ['02', 'Find the right setup', 'We’ll talk through vending and cooler options to find an approach that works for your workplace.'],
         ['03', 'Make room for refreshment', 'Plan the next steps with our team and bring a little more convenience to the workday.'],
