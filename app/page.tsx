@@ -109,33 +109,26 @@ export default function Home() {
   </div>
   <div className="overflow-hidden py-8">
     <div className="flex w-max items-center gap-6 animate-[clientScroll_24s_linear_infinite] motion-reduce:animate-none">
-      {Array.from({ length: 4 }).flatMap((_, group) =>
-       
-[
-  { name: "CTS", logo: "/CTS%20Logo.png" },
-  { name: "NORC", logo: "/NORCLogo_Short_Color-1.png" },
-  { name: "THE HOME DEPOT", logo: "/Home-Depot-Logo-PNG-Photos.png" }
-].map(({ name, logo }) => (
-
-
-
+      {Array.from({ length: 4 }, (_, group) => group).flatMap((group) =>
+        [
+          { name: "CTS", logo: "/CTS%20Logo.png" },
+          { name: "NORC", logo: "/NORCLogo_Short_Color-1.png" },
+          { name: "THE HOME DEPOT", logo: "/Home-Depot-Logo-PNG-Photos.png" },
+        ].map(({ name, logo }) => (
           <div
             key={group + name}
             aria-hidden={group > 0}
             className="solution-card flex h-28 w-56 shrink-0 items-center justify-center text-center text-2xl font-bold"
           >
-
-<img
-  src={logo}
-  alt={`${name} logo`}
- className="h-20 w-full object-contain"
-style={{ display: "block", maxWidth: "180px" }}
-/>
- 
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              className="h-20 w-full object-contain"
+              style={{ display: "block", maxWidth: "180px" }}
+            />
           </div>
-     
-)))
-)}
+        ))
+      )}
 </div>
 </div>
    
