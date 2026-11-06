@@ -144,7 +144,7 @@ export default function Home() {
 <section className="shell section-space" aria-label="Businesses we serve">
   <div className="section-heading">
     <p className="eyebrow">TRUSTED LOCAL PARTNERS</p>
-    <h2>Proudly Serving New Mexico Businesses</h2>
+    <h2 className="whitespace-nowrap text-[clamp(1.15rem,3.1vw,2.65rem)] tracking-tight">Proudly Serving New Mexico Businesses</h2>
     <p>Bringing convenient refreshments to workplaces across New Mexico.</p>
   </div>
   <div className="overflow-hidden py-8">
