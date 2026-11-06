@@ -111,7 +111,7 @@ export default function Home() {
     <div className="flex w-max items-center gap-6 animate-[clientScroll_24s_linear_infinite] motion-reduce:animate-none">
       {Array.from({ length: 4 }).flatMap((_, group) =>
        
-([
+[
   { name: "CTS", logo: "/CTS%20Logo.png" },
   { name: "NORC", logo: "/NORCLogo_Short_Color-1.png" },
   { name: "THE HOME DEPOT", logo: "/Home-Depot-Logo-PNG-Photos.png" }
@@ -134,7 +134,7 @@ style={{ display: "block", maxWidth: "180px" }}
  
           </div>
      
-))
+)))
 )}
 </div>
 </div>
