@@ -224,7 +224,9 @@ export default function Home() {
       { number: "05", title: "Healthcare & Medical Offices", description: "Help staff, patients, and visitors find convenient refreshments during busy days and long shifts.", kind: "health" },
       { number: "06", title: "Gyms & Fitness Centers", description: "Offer members refreshing drinks, protein-forward snacks, and convenient post-workout options.", kind: "fitness" },
     ].map(({ number, title, description, kind }) => (
-      <article key={number} className="solution-card group flex flex-col gap-3 overflow-hidden !p-0">\n        <div className="relative h-40 overflow-hidden"><img src={`/business-${kind}.svg`} alt={`${title} illustrated business setting`} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" /><div className="absolute inset-0 bg-gradient-to-t from-[#122c30] via-transparent to-transparent" /></div>\n        <div className="flex flex-col gap-3 px-6 pb-7">
+      <article key={number} className="solution-card group flex flex-col gap-3 overflow-hidden !p-0">
+        <div className="relative h-44 overflow-hidden" role="img" aria-label={`${title} illustrated business setting`} style={{ backgroundImage: `url(/rgr-business-scenes.jpg), url(/business-${kind}.svg)`, backgroundSize: "300% 200%, cover", backgroundPosition: `${(Number(number) - 1) % 3 * 50}% ${Number(number) <= 3 ? 0 : 100}%, center`, backgroundRepeat: "no-repeat" }}><div className="absolute inset-0 bg-gradient-to-t from-[#122c30]/60 via-transparent to-transparent" /></div>
+        <div className="flex flex-col gap-3 px-6 pb-7">
         <span className="card-number">{number} / WHERE WE FIT</span>
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-teal-400/40 bg-teal-400/10 text-teal-300" aria-hidden="true">
           <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
@@ -238,7 +240,8 @@ export default function Home() {
         </div>
         <h3 className="text-xl font-bold">{title}</h3>
         <p>{description}</p>
-        </div>\n      </article>
+        </div>
+      </article>
     ))}
   </div>
   <div className="mt-8 flex flex-col items-center gap-3 text-center">
