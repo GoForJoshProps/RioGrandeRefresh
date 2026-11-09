@@ -38,7 +38,7 @@ export default function Home() {
     </header>
     <main id="main">
       <section className="shell hero grid items-center gap-10 lg:grid-cols-2">
-        <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> NEW MEXICO ROOTS. A FRESHER FUTURE.</p>
+        <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> LOCAL SERVICE. SMARTER REFRESHMENTS.</p>
           <h1>Modern Machines.<br /><span className="sunset-text">Everyday Essentials.</span></h1>
           <p className="hero-description">AI-powered vending and smart coolers for the places New Mexico works. Good things to grab. One less thing to manage.</p>
           <div className="flex flex-wrap gap-4"><a className="button button-orange" href="#request-machine">Refresh your workplace <Arrow /></a><a className="button button-outline" href="#machines">Explore the possibilities</a></div>
