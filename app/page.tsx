@@ -197,6 +197,24 @@ export default function Home() {
              <><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></>}
           </svg>
         </div>
+        <div className="relative my-2 flex h-36 items-center justify-center overflow-hidden rounded-xl border border-teal-400/20 bg-gradient-to-br from-[#062a31] via-[#123e46] to-[#0b1927]" aria-hidden="true">
+          <div className="absolute -right-8 -top-12 h-32 w-32 rounded-full bg-orange-400/20 blur-3xl" />
+          <div className="absolute -bottom-10 -left-8 h-28 w-28 rounded-full bg-teal-400/20 blur-2xl" />
+          <svg className="relative h-32 w-full max-w-[230px]" viewBox="0 0 230 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id={`cooler-graphic-${index}`} x1="60" y1="0" x2="160" y2="130" gradientUnits="userSpaceOnUse"><stop stopColor="#254C57"/><stop offset="1" stopColor="#091D2A"/></linearGradient></defs>
+            <rect x="65" y="8" width="95" height="114" rx="10" fill={`url(#cooler-graphic-${index})`} stroke="#34E5D0" strokeWidth="2"/>
+            <rect x="74" y="18" width="69" height="91" rx="5" fill="#081C29" stroke="#507983"/>
+            <path d="M97 19v89M75 61h67" stroke="#3C7580" strokeWidth="2"/>
+            {[[82,30,"#FF9A50"],[108,30,"#2DD4BF"],[82,70,"#5AC5FF"],[108,70,"#F5C86C"]].map(([x,y,color],i)=><g key={i}><rect x={x} y={y} width="17" height="25" rx="3" fill={color} opacity=".9"/><rect x={x+4} y={y-5} width="9" height="6" rx="2" fill={color}/></g>)}
+            <rect x="148" y="49" width="7" height="25" rx="3" fill="#28DCC9"/>
+            {index === 0 ? <g><rect x="165" y="63" width="53" height="35" rx="6" fill="#163F49" stroke="#FBA35C" strokeWidth="2"/><path d="M174 74h35M176 84h12" stroke="#FFB56D" strokeWidth="3" strokeLinecap="round"/><path d="M180 48c8 3 8 9 0 12M189 43c13 7 13 17 0 24" stroke="#2DE0C8" strokeWidth="2.5" strokeLinecap="round"/></g> :
+            index === 1 ? <g><path d="M148 18l39 8v83l-39-8z" fill="#194C56" stroke="#35E5D0" strokeWidth="2"/><path d="M178 67h4" stroke="#FFB56D" strokeWidth="4" strokeLinecap="round"/><path d="M191 44l9 10-9 10" stroke="#FFB56D" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></g> :
+            index === 2 ? <g><rect x="167" y="60" width="24" height="42" rx="5" fill="#2DD4BF"/><rect x="173" y="52" width="12" height="10" rx="3" fill="#85FFF0"/><path d="M170 76h18M170 84h18" stroke="#08414B" strokeWidth="3"/><path d="M198 79h18m-8-8 8 8-8 8" stroke="#FFB56D" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></g> :
+            <g><circle cx="193" cy="77" r="24" fill="#103E44" stroke="#2DE0C8" strokeWidth="2"/><path d="m181 77 8 8 16-18" stroke="#FFB56D" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/><path d="M167 27h40" stroke="#FFB56D" strokeWidth="3" strokeLinecap="round"/></g>}
+            <path d="M37 122h158" stroke="#2DE0C8" strokeOpacity=".55" strokeWidth="2" strokeLinecap="round"/>
+            <circle cx="38" cy="25" r="12" fill="#FF9753" opacity=".65"/>
+          </svg>
+        </div>
         <h3 className="text-xl font-bold">{title}</h3>
         <p>{description}</p>
       </article>
