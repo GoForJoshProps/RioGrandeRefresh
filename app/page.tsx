@@ -290,6 +290,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="mt-6 max-w-xl rounded-xl border border-teal-400/30 bg-teal-400/10 px-5 py-4 text-sm leading-relaxed text-teal-50"><strong className="text-base text-white">Around 1,200 purchases monthly.</strong> Each purchase creates an opportunity for your ad to reach a local customer. Actual ad views may vary.</p>
         <a className="button button-orange mt-8" href="#contact">Advertise Your Business Today <Arrow /></a>
         <p className="muted mt-3 text-sm">Ask us about available screen placements and annual advertising options.</p>
       </div>
