@@ -280,7 +280,7 @@ export default function Home() {
         <p className="muted max-w-xl">Put your business in front of customers where they work and take their breaks. Our smart vending screens feature rotating digital advertisements throughout the day.</p>
         <div className="mt-7 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           {[
-            { number: "01", title: "5-Second Digital Ads", text: "Short, eye-catching spots designed for quick attention." },
+            { number: "01", title: "Digital Ads", text: "Eye-catching spots designed for quick attention." },
             { number: "02", title: "Rotating Throughout the Day", text: "Your ad shares screen time with other participating advertisers." },
             { number: "03", title: "Reach Local Workplaces", text: "Get your business seen by customers at participating vending locations." },
           ].map(({ number, title, text }) => (
