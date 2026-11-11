@@ -304,6 +304,27 @@ export default function Home() {
     </div>
   </div>
 </section>
+<section id="reviews" className="shell section-space" aria-label="Leave Rio Grande Refresh a Google review">
+  <div className="relative overflow-hidden rounded-3xl border border-teal-400/50 bg-[#061f26] px-6 py-9 shadow-[0_16px_55px_rgba(0,0,0,0.25)] sm:px-10 lg:px-12">
+    <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-orange-500/15 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-teal-400/15 blur-3xl" aria-hidden="true" />
+    <div className="relative grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_220px]">
+      <div>
+        <p className="eyebrow">YOUR FEEDBACK MATTERS</p>
+        <h2 className="mt-3 text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-tight">Enjoying <span className="sunset-text">Rio Grande Refresh?</span></h2>
+        <p className="muted mt-4 max-w-xl text-base leading-relaxed">Your feedback helps our locally owned New Mexico business grow. We'd appreciate hearing about your experience!</p>
+        <div className="mt-5 text-2xl tracking-[0.2em] text-amber-400" aria-label="Five stars" role="img">★★★★★</div>
+        <a className="button button-orange mt-6 inline-flex items-center gap-3" href="https://g.page/r/CXHk0HQD3-7QEBM/review?utm_source=gbp&amp;utm_medium=reviews&amp;utm_campaign=qr" target="_blank" rel="noopener noreferrer">Leave Us a Google Review <Arrow /></a>
+      </div>
+      <div className="mx-auto flex w-full max-w-[220px] flex-col items-center gap-3">
+        <div className="w-full rounded-2xl border-4 border-teal-400 bg-white p-3 shadow-[0_0_25px_rgba(45,212,191,0.25)]">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&amp;margin=12&amp;data=https%3A%2F%2Fg.page%2Fr%2FCXHk0HQD3-7QEBM%2Freview%3Futm_source%3Dgbp%26utm_medium%3Dreviews%26utm_campaign%3Dqr" alt="Scan to leave Rio Grande Refresh a Google review" className="block aspect-square w-full" loading="lazy" width="192" height="192" />
+        </div>
+        <p className="text-center text-sm font-bold uppercase tracking-wider text-teal-200">Scan to review</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="contact" className="shell contact-wrap"><div className="contact-panel"><p className="eyebrow">LET’S BRING SOMETHING FRESH TO YOUR SPACE</p><h2>Want a FREE<br />Vending Machine?</h2><p>Get a modern AI vending machine for your workplace at absolutely no cost. We handle installation, stocking, cleaning, and maintenance. You provide the space, and we handle the rest!</p><div className="flex flex-wrap items-center gap-5"><form action="https://formspree.io/f/xoeezawv" method="POST" className="grid gap-3 w-full max-w-xl">
 <label htmlFor="inquiry-name" className="font-bold text-sm">Your name</label><input id="inquiry-name" name="name" type="text" autoComplete="name" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
 <label htmlFor="inquiry-email" className="font-bold text-sm">Email</label><input id="inquiry-email" name="email" type="email" autoComplete="email" required className="w-full rounded-md p-3 text-slate-900 bg-white" />
