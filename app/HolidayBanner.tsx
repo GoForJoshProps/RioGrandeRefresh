@@ -28,9 +28,9 @@ export default function HolidayBanner() {
   return (
     <>
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-[45] overflow-hidden" style={{ contain: "layout style" }}>
-      {Array.from({ length: 14 }, (_, i) => (
-        <span key={i} className="holiday-falling-leaf absolute top-0 select-none" style={{ left: `${(i * 37 + 11) % 100}%`, fontSize: `${16 + (i % 4) * 5}px`, opacity: 0.45 + (i % 3) * 0.12, animationDuration: `${11 + (i % 6) * 2.2}s`, animationDelay: `${-i * 2.7}s`, ["--leaf-drift" as string]: `${(i % 2 ? -1 : 1) * (35 + i * 9)}px`, ["--leaf-rotate" as string]: `${(i % 2 ? -1 : 1) * (280 + i * 29)}deg` }}>
-          {["🍂", "🍁", "🍃"][i % 3]}
+      {Array.from({ length: 16 }, (_, i) => (
+        <span key={i} className="holiday-falling-leaf absolute top-0 select-none" style={{ left: `${(i * 37 + 11) % 100}%`, fontSize: `${29 + (i % 4) * 6}px`, opacity: 0.65 + (i % 3) * 0.1, animationDuration: `${11 + (i % 6) * 2.2}s`, animationDelay: `${-i * 2.7}s`, ["--leaf-drift" as string]: `${(i % 2 ? -1 : 1) * (35 + i * 9)}px`, ["--leaf-rotate" as string]: `${(i % 2 ? -1 : 1) * (280 + i * 29)}deg` }}>
+          {["🍁", "🍂", "🍁", "🍂"][i % 4]}
         </span>
       ))}
     </div>
