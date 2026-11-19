@@ -1,3 +1,4 @@
+import HolidayBanner from "./HolidayBanner";
 const Arrow = () => <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 19 19 5M5 5h14v14" /></svg>;
 
 
@@ -36,6 +37,7 @@ export default function Home() {
 
       <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-5 text-sm"><a href="#machines">Our machines</a><a href="#easy-shopping">How to use our coolers</a><a href="#advertise">Advertising</a><a className="nav-cta" href="#request-machine">Free machine <Arrow /></a></nav>
     </header>
+    <HolidayBanner />
     <main id="main">
       <section className="shell hero grid items-center gap-10 lg:grid-cols-2">
         <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> LOCAL SERVICE. SMARTER REFRESHMENTS.</p>
