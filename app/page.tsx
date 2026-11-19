@@ -53,14 +53,30 @@ export default function Home() {
     <h2 className="whitespace-nowrap text-[clamp(1.15rem,3.1vw,2.65rem)] tracking-tight">Proudly Serving New Mexico Businesses</h2>
     <p>Bringing convenient refreshments to workplaces across New Mexico.</p>
   </div>
-  <div className="flex flex-wrap justify-center gap-6 py-8">
-    <div className="solution-card flex h-28 w-56 items-center justify-center text-center">
-      <img src="/CTS%20Logo.png" alt="CTS logo" className="h-20 w-full object-contain" style={{ display: "block", maxWidth: "180px" }} />
-    </div>
-    <div className="solution-card flex h-28 w-56 items-center justify-center text-center">
-      <img src="/transcend-logo.svg" alt="Transcend Forever Athlete logo" className="h-20 w-full object-contain" style={{ display: "block", maxWidth: "200px" }} />
+  <div className="overflow-hidden py-8" aria-label="Our New Mexico business partners">
+    <div className="flex w-max items-center gap-6 animate-[partnerScroll_20s_linear_infinite] motion-reduce:animate-none">
+      {Array.from({ length: 6 }, (_, group) => group).flatMap((group) =>
+        [
+          { name: "CTS", logo: "/CTS%20Logo.png" },
+          { name: "Transcend Forever Athlete", logo: "/transcend-logo.svg" },
+        ].map(({ name, logo }) => (
+          <div
+            key={group + name}
+            aria-hidden={group > 0}
+            className="solution-card flex h-28 w-56 shrink-0 items-center justify-center text-center"
+          >
+            <img src={logo} alt={group === 0 ? `${name} logo` : ""} className="h-20 w-full object-contain" style={{ display: "block", maxWidth: "200px" }} />
+          </div>
+        ))
+      )}
     </div>
   </div>
+  <style>{`
+    @keyframes partnerScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-1 * (2 * 14rem + 2 * 1.5rem))); }
+    }
+  `}</style>
 </section>
 <section id="products" className="shell section-space" aria-label="Products available in our machines">
   <div className="section-heading">
