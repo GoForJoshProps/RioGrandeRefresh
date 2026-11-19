@@ -53,9 +53,12 @@ export default function Home() {
     <h2 className="whitespace-nowrap text-[clamp(1.15rem,3.1vw,2.65rem)] tracking-tight">Proudly Serving New Mexico Businesses</h2>
     <p>Bringing convenient refreshments to workplaces across New Mexico.</p>
   </div>
-  <div className="flex justify-center py-8">
+  <div className="flex flex-wrap justify-center gap-6 py-8">
     <div className="solution-card flex h-28 w-56 items-center justify-center text-center">
       <img src="/CTS%20Logo.png" alt="CTS logo" className="h-20 w-full object-contain" style={{ display: "block", maxWidth: "180px" }} />
+    </div>
+    <div className="solution-card flex h-28 w-56 items-center justify-center text-center">
+      <img src="/transcend-logo.svg" alt="Transcend Forever Athlete logo" className="h-20 w-full object-contain" style={{ display: "block", maxWidth: "200px" }} />
     </div>
   </div>
 </section>
